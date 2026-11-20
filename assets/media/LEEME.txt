@@ -1,0 +1,18 @@
+ARCHIVOS DEL CARRUSEL DE LA PÁGINA DE INICIO
+=============================================
+
+Coloque aquí los archivos con estos nombres exactos:
+
+  hero-video.mp4          Diapositiva 1 (video). Sin sonido: se reproduce silenciado.
+  hero-video-poster.jpg   Imagen que se ve mientras carga el video (un cuadro del mismo video).
+  hero-2.jpg              Diapositiva 2: Tolsen (herramientas, exhibición de productos Tolsen).
+  hero-3.jpg              Diapositiva 3: Catálogo (tienda, almacén o anaqueles).
+  hero-4.jpg              Diapositiva 4: Cotización / atención al cliente.
+
+Recomendaciones:
+  - Video: MP4 (H.264), 1920x1080 o 1280x720, de 10 a 20 segundos, máximo ~8 MB.
+    El carrusel pasa a la siguiente diapositiva cuando el video termina.
+  - Fotos: JPG horizontales de 1920x1080, máximo ~400 KB cada una.
+  - El texto va a la izquierda: conviene que lo importante de la foto esté a la derecha.
+
+Si un archivo no existe, esa diapositiva muestra el fondo azul de la marca.

@@ -1,0 +1,9 @@
+Coloca aqui las fotos (descargadas del Instagram @selactcorp) con estos nombres exactos:
+
+  nosotros.jpg     -> foto vertical del local, almacen o equipo (seccion "Quienes somos")
+  galeria-1.jpg    -> galeria de Instagram (cuadradas, idealmente 800x800)
+  galeria-2.jpg
+  ...
+  galeria-8.jpg
+
+Si una foto no existe, la pagina muestra automaticamente un fondo azul con el logo.
