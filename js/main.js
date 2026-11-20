@@ -283,6 +283,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- Marcas reales desde NAV ---------- */
+  // Logos disponibles en assets/img/marcas (las demás marcas se muestran con su nombre)
+  const BRAND_LOGOS = {
+    TOLSEN: "tolsen.png",
+    SAM: "sam.png",
+    ROMA: "roma.png",
+    ITAP: "itap.png",
+    URREA: "urrea.png",
+    TANGIT: "tangit.png",
+  };
   const brandsGrid = document.getElementById("brandsGrid");
   const filtrosUrl = Selact.apiUrl("/api/public/catalogo/filtros?v=2");
   if (brandsGrid && filtrosUrl) {
@@ -300,7 +309,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (m.valor.toUpperCase() === "TOLSEN") cls += " brand--tolsen";
             const extra = m.valor.toUpperCase() === "SAM" ? "Incluye línea SAM Plus · " : "";
             const n = m.cantidad === 1 ? "1 producto" : `${fmt(m.cantidad)} productos`;
-            return `<a href="catalogo.html?marca=${encodeURIComponent(m.valor)}" class="${cls}"><strong>${esc(m.valor)}</strong><span>${extra}${n}</span></a>`;
+            const key = m.valor.toUpperCase();
+            const logo = BRAND_LOGOS[key];
+            const plate = key === "SAM" ? " brand__logo--plate" : "";
+            const head = logo
+              ? `<span class="brand__logo${plate}"><img src="assets/img/marcas/${logo}" alt="${esc(m.valor)}" onerror="this.parentNode.outerHTML='<strong>${esc(m.valor)}</strong>'"></span>`
+              : `<strong>${esc(m.valor)}</strong>`;
+            return `<a href="catalogo.html?marca=${encodeURIComponent(m.valor)}" class="${cls}">${head}<span>${extra}${n}</span></a>`;
           })
           .join("");
         const totalBrands = document.querySelector("[data-brand-total]");
