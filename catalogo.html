@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos | Selact Corporation</title>
+  <meta name="description" content="Consulta el catálogo de productos en existencia de Selact Corporation: ferretería, construcción, eléctricos y hogar. Marcas Tolsen, SAM y SAM Plus.">
+  <meta name="theme-color" content="#111D3C">
+  <link rel="icon" href="assets/img/logo-selact.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Soluciones de ferretería · Bajos de Haina, República Dominicana</span>
+      <div class="topbar__right">
+        <a href="#" class="js-whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="js-phone-text">(829) 732-1674</span></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Selact Corporation - Inicio">
+        <img src="assets/img/logo-selact.png" alt="Selact Corporation" width="801" height="142">
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="index.html#nosotros" class="nav__link">Nosotros</a>
+        <a href="index.html#marcas" class="nav__link">Marcas</a>
+        <a href="catalogo.html" class="nav__link is-active">Catálogo</a>
+        <a href="index.html#contacto" class="nav__link">Contacto</a>
+        <a href="index.html#cotizar" class="btn btn--red nav__cta">Cotizar</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="demo-banner" id="demoBanner" hidden>
+    <strong>Modo demostración:</strong> se muestran productos de ejemplo. Configura <code>apiUrl</code> en <code>js/config.js</code> para conectar con Dynamics NAV.
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Catálogo en línea</span>
+      <h1>Productos en existencia</h1>
+      <p>Busca por nombre, código o referencia, agrega los productos a tu lista y envíanos tu solicitud de cotización por WhatsApp.</p>
+    </div>
+  </section>
+
+  <main class="catalog">
+    <div class="container catalog__layout">
+
+      <aside class="filters" id="filters" aria-label="Filtros">
+        <h3>Filtros <button class="filters__clear" id="clearFilters" type="button">Limpiar</button></h3>
+        <div class="filters__group">
+          <span>Marca</span>
+          <div class="chips" id="brandChips"></div>
+        </div>
+        <div class="filters__group">
+          <span>Tipo de producto</span>
+          <div class="chips" id="categoryChips"></div>
+        </div>
+      </aside>
+
+      <div>
+        <div class="catalog__toolbar">
+          <div class="search">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+            <input type="search" class="field" id="searchInput" placeholder="Buscar por nombre, código o referencia..." autocomplete="off" aria-label="Buscar productos">
+          </div>
+          <button class="btn btn--ghost filters-toggle" id="filtersToggle" type="button">Filtros</button>
+          <span class="catalog__count" id="resultCount" role="status"></span>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+        <nav class="pagination" id="pagination" aria-label="Paginación"></nav>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="index.html" class="logo logo--light"><img src="assets/img/logo-selact.png" alt="Selact Corporation" width="801" height="142"></a>
+        <p>Los mejores productos ferreteros e insumos de construcción, para uso industrial y doméstico.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="index.html">Inicio</a><a href="index.html#nosotros">Nosotros</a><a href="catalogo.html">Catálogo</a><a href="index.html#contacto">Contacto</a>
+      </div>
+      <div>
+        <h4>Marcas</h4>
+        <a href="catalogo.html?marca=TOLSEN">Tolsen</a><a href="catalogo.html?marca=SAM">SAM</a><a href="catalogo.html?buscar=SAM%20PLUS">SAM Plus</a><a href="catalogo.html?marca=FAMA">Fama</a><a href="catalogo.html?marca=URREA">Urrea</a><a href="index.html#marcas">Todas las marcas</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Bajos de Haina, San Cristóbal,<br>República Dominicana</p>
+        <a href="#" class="js-whatsapp" target="_blank" rel="noopener"><span class="js-phone-text">(829) 732-1674</span></a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Selact Corporation. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Lista de cotización -->
+  <button class="cart-btn" id="cartBtn" type="button" aria-label="Ver lista de cotización">
+    <svg viewBox="0 0 24 24"><path d="M19 3h-4.2A3 3 0 0 0 12 1a3 3 0 0 0-2.8 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm2 14H7v-2h7zm3-4H7v-2h10zm0-4H7V7h10z"/></svg>
+    <span class="cart-btn__label">Mi cotización</span>
+    <span class="cart-btn__count" id="cartCount">0</span>
+  </button>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Lista de cotización" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Mi lista de cotización</h3>
+      <button class="drawer__close" id="drawerClose" type="button" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="drawer__body" id="cartItems"></div>
+    <div class="drawer__foot">
+      <input type="text" class="field" id="cartName" placeholder="Tu nombre o empresa (opcional)">
+      <button class="btn btn--whatsapp btn--block" id="cartSend" type="button">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+        Enviar cotización por WhatsApp
+      </button>
+      <button class="btn btn--ghost btn--block btn--sm" id="cartClear" type="button">Vaciar lista</button>
+    </div>
+  </aside>
+
+  <a href="#" class="wa-float js-whatsapp" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

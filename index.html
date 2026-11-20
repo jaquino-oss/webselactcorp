@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selact Corporation | Soluciones de Ferretería en República Dominicana</title>
+  <meta name="description" content="Selact Corporation: los mejores productos ferreteros e insumos de construcción para uso industrial y doméstico. Distribuidores Tolsen, SAM y SAM Plus en Bajos de Haina, República Dominicana.">
+  <meta name="theme-color" content="#111D3C">
+  <link rel="icon" href="assets/img/logo-selact.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ TOPBAR ============ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Soluciones de ferretería · Bajos de Haina, República Dominicana</span>
+      <div class="topbar__right">
+        <a href="#" class="js-whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="js-phone-text">(829) 732-1674</span></a>
+        <a href="https://www.instagram.com/selactcorp/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM21.9 7c-.1-1.6-.4-3-1.6-4.2S17.6 1.2 16 1.1C14.4 1 9.6 1 8 1.1 6.4 1.2 5 1.5 3.8 2.7S2.2 5.4 2.1 7C2 8.6 2 15.4 2.1 17c.1 1.6.4 3 1.6 4.2s2.7 1.5 4.3 1.6c1.6.1 8.4.1 10 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-8.4 0-10z"/></svg>@selactcorp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Selact Corporation - Inicio">
+        <img src="assets/img/logo-selact.png" alt="Selact Corporation" width="801" height="142">
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav__link">Inicio</a>
+        <a href="#nosotros" class="nav__link">Nosotros</a>
+        <a href="#productos" class="nav__link">Productos</a>
+        <a href="#marcas" class="nav__link">Marcas</a>
+        <a href="catalogo.html" class="nav__link">Catálogo</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+        <a href="#cotizar" class="btn btn--red nav__cta">Cotizar</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <!-- Carrusel principal. Los archivos van en assets/media (ver LEEME.txt).
+         Si un archivo no existe, esa diapositiva usa el fondo azul de la marca. -->
+    <section class="hero hero-slider" id="inicio" aria-roledescription="carrusel" aria-label="Presentación">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <!-- 1. Video -->
+      <div class="slide is-active" data-duration="15000" role="group" aria-roledescription="diapositiva" aria-label="1 de 4">
+        <video class="slide__media" muted playsinline preload="auto" poster="assets/media/hero-video-poster.jpg">
+          <source src="assets/media/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="container slide__inner">
+          <div class="slide__content">
+            <span class="eyebrow">Soluciones de ferretería</span>
+            <h1>Los mejores productos ferreteros e insumos de <span class="accent">construcción</span></h1>
+            <p class="hero__lead">Abastecemos proyectos industriales, contratistas y hogares con herramientas, materiales y equipos de calidad. Todo lo que tu obra necesita, en un solo lugar.</p>
+            <div class="hero__actions">
+              <a href="catalogo.html" class="btn btn--red btn--lg">Ver catálogo</a>
+              <a href="#cotizar" class="btn btn--outline btn--lg">Solicitar cotización</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Tolsen -->
+      <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 4">
+        <img class="slide__media" src="assets/media/hero-2.jpg" alt="" loading="lazy" style="object-position: 58% center"><!-- Imagen: tolsentools.com -->
+        <div class="container slide__inner">
+          <div class="slide__content">
+            <span class="eyebrow">Distribuidores Tolsen</span>
+            <h2 class="slide__title">Más de 1,000 herramientas <span class="accent accent--tolsen">Tolsen</span> en existencia</h2>
+            <p class="hero__lead">Herramientas manuales, eléctricas y accesorios con la calidad y garantía de una marca profesional.</p>
+            <div class="hero__actions">
+              <a href="catalogo.html?marca=TOLSEN" class="btn btn--tolsen btn--lg">Ver productos Tolsen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Catálogo -->
+      <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 4">
+        <img class="slide__media" src="assets/media/hero-3.jpg" alt="" loading="lazy">
+        <div class="container slide__inner">
+          <div class="slide__content">
+            <span class="eyebrow">Catálogo en línea</span>
+            <h2 class="slide__title">Consulta lo que tenemos <span class="accent">disponible hoy</span></h2>
+            <p class="hero__lead">Ferretería, plomería, eléctricos, cerrajería y hogar. Busca por nombre o código y arma tu lista de cotización.</p>
+            <div class="hero__actions">
+              <a href="catalogo.html" class="btn btn--red btn--lg">Explorar catálogo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Cotización -->
+      <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 4">
+        <img class="slide__media" src="assets/media/hero-4.jpg" alt="" loading="lazy">
+        <div class="container slide__inner">
+          <div class="slide__content">
+            <span class="eyebrow">Atención personalizada</span>
+            <h2 class="slide__title">Cotiza rápido por <span class="accent">WhatsApp</span></h2>
+            <p class="hero__lead">Para industrias, contratistas, ferreterías y hogares. Te respondemos con precios y disponibilidad.</p>
+            <div class="hero__actions">
+              <a href="#cotizar" class="btn btn--red btn--lg">Solicitar cotización</a>
+              <a href="#" class="btn btn--outline btn--lg js-whatsapp" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-slider__controls">
+        <div class="hero-slider__dots" role="tablist" aria-label="Elegir diapositiva"></div>
+        <div class="hero-slider__arrows">
+          <button type="button" class="hero-slider__btn" data-dir="-1" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+          <button type="button" class="hero-slider__btn hero-slider__pause" aria-label="Pausar"><svg viewBox="0 0 24 24"><path class="i-pause" d="M6 5h4v14H6zm8 0h4v14h-4z"/><path class="i-play" d="M8 5v14l11-7z"/></svg></button>
+          <button type="button" class="hero-slider__btn" data-dir="1" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal"><strong data-catalog-total>4</strong><span data-catalog-label>líneas de productos</span></div>
+        <div class="stat reveal"><strong data-count="10" data-brand-total>10</strong><span>marcas reconocidas</span></div>
+        <div class="stat reveal"><strong data-count="6600">0</strong><span>+ seguidores en Instagram</span></div>
+        <div class="stat reveal"><strong>B2B · B2C</strong><span>Industria y hogar</span></div>
+      </div>
+    </section>
+
+    <!-- ============ NOSOTROS ============ -->
+    <section class="section about" id="nosotros">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="photo">
+            <img src="assets/img/fotos/nosotros.jpg" alt="Instalaciones de Selact Corporation" loading="lazy">
+            <div class="photo__fallback"><div><img src="assets/img/logo-selact.png" alt="">Foto: assets/img/fotos/nosotros.jpg</div></div>
+          </div>
+          <div class="about__tag">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            <div><strong>Bajos de Haina</strong><span>República Dominicana</span></div>
+          </div>
+        </div>
+        <div class="about__content reveal">
+          <span class="eyebrow">Quiénes somos</span>
+          <h2>Tu aliado en ferretería, construcción e industria</h2>
+          <p>En <strong>Selact Corporation</strong> nos dedicamos a suplir productos ferreteros e insumos de construcción de alta calidad para empresas, contratistas, técnicos y hogares dominicanos.</p>
+          <p>Trabajamos con marcas reconocidas como <strong>Tolsen</strong>, <strong>SAM</strong> y <strong>SAM Plus</strong> para garantizar durabilidad, buen precio y disponibilidad, acompañando a cada cliente con asesoría y atención personalizada.</p>
+          <div class="values">
+            <div class="value">
+              <span class="value__icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z"/></svg></span>
+              <div><h4>Calidad garantizada</h4><p>Productos de marcas confiables y probadas en obra.</p></div>
+            </div>
+            <div class="value">
+              <span class="value__icon"><svg viewBox="0 0 24 24"><path d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zM9 4h6v2H9z"/></svg></span>
+              <div><h4>Inventario disponible</h4><p>Consulta en línea los productos que tenemos en existencia.</p></div>
+            </div>
+            <div class="value">
+              <span class="value__icon"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5z"/></svg></span>
+              <div><h4>Asesoría experta</h4><p>Te ayudamos a elegir lo que tu proyecto necesita.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTOS ============ -->
+    <section class="section products" id="productos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Nuestros productos</span>
+          <h2>Todo para tu proyecto, en un solo lugar</h2>
+          <p>Explora nuestras principales líneas o busca directamente en el catálogo los productos disponibles en inventario.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 64 64"><path d="M42.6 8.4a12 12 0 0 0-15.2 15.3L8.6 42.5a5.5 5.5 0 0 0 7.8 7.8l18.8-18.8a12 12 0 0 0 15.3-15.2l-7 7-6.3-1.6-1.6-6.3z"/></svg></div>
+            <h3>Ferretería</h3>
+            <p>Herramientas manuales, tornillería, fijaciones, cerraduras y todo lo esencial para el día a día.</p>
+            <ul><li>Herramientas manuales</li><li>Tornillos y anclajes</li><li>Candados y cerraduras</li></ul>
+            <a href="catalogo.html" class="card__link">Ver en catálogo →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 64 64"><path d="M8 52h48v4H8zM12 28h40v20H12zm4 4v12h14V32zm18 0v12h14V32zM32 6 6 24h52z"/></svg></div>
+            <h3>Construcción</h3>
+            <p>Insumos y equipos para obras de cualquier escala, desde reparaciones hasta proyectos industriales.</p>
+            <ul><li>Materiales de obra</li><li>Equipos de seguridad</li><li>Medición y nivelación</li></ul>
+            <a href="catalogo.html" class="card__link">Ver en catálogo →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 64 64"><path d="M36 4 12 36h18l-4 24 26-34H34z"/></svg></div>
+            <h3>Eléctricos</h3>
+            <p>Material eléctrico y herramientas eléctricas para instalaciones residenciales, comerciales e industriales.</p>
+            <ul><li>Herramientas eléctricas</li><li>Cables y conexiones</li><li>Iluminación</li></ul>
+            <a href="catalogo.html" class="card__link">Ver en catálogo →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 64 64"><path d="M32 6 4 30h8v26h16V40h8v16h16V30h8z"/></svg></div>
+            <h3>Hogar</h3>
+            <p>Soluciones prácticas para mantenimiento, reparación y mejoras del hogar.</p>
+            <ul><li>Plomería</li><li>Jardinería</li><li>Organización y limpieza</li></ul>
+            <a href="catalogo.html" class="card__link">Ver en catálogo →</a>
+          </article>
+        </div>
+
+        <div class="products__cta reveal">
+          <a href="catalogo.html" class="btn btn--navy btn--lg">Explorar catálogo completo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARCAS ============ -->
+    <section class="section brands" id="marcas">
+      <div class="container brands__inner">
+        <div class="brands__content reveal">
+          <span class="eyebrow">Marcas que distribuimos</span>
+          <h2>Marcas líderes en <span class="accent">herramientas</span> y ferretería</h2>
+          <p>Representamos marcas reconocidas por su resistencia, precisión y excelente relación calidad-precio, para que tengas siempre la herramienta correcta, al mejor precio.</p>
+          <a href="catalogo.html" class="btn btn--red">Ver productos por marca</a>
+        </div>
+        <!-- Se actualiza solo desde NAV (js/main.js). Esta lista es el respaldo si el servicio no responde. -->
+        <div class="brands__logos reveal" id="brandsGrid">
+          <a href="catalogo.html?marca=TOLSEN" class="brand brand--wide brand--tolsen"><strong>TOLSEN</strong><span>1,183 productos</span></a>
+          <a href="catalogo.html?marca=SAM" class="brand brand--wide brand--alt"><strong>SAM</strong><span>Incluye línea SAM Plus · 168 productos</span></a>
+          <a href="catalogo.html?marca=FAMA" class="brand"><strong>FAMA</strong><span>63 productos</span></a>
+          <a href="catalogo.html?marca=ZBW" class="brand"><strong>ZBW</strong><span>35 productos</span></a>
+          <a href="catalogo.html?marca=ROMA" class="brand"><strong>ROMA</strong><span>28 productos</span></a>
+          <a href="catalogo.html?marca=ITAP" class="brand"><strong>ITAP</strong><span>18 productos</span></a>
+          <a href="catalogo.html?marca=URREA" class="brand"><strong>URREA</strong><span>18 productos</span></a>
+          <a href="catalogo.html?marca=DICA" class="brand"><strong>DICA</strong><span>15 productos</span></a>
+          <a href="catalogo.html?marca=TANGIT" class="brand"><strong>TANGIT</strong><span>14 productos</span></a>
+          <a href="catalogo.html?marca=PROWELD" class="brand"><strong>PROWELD</strong><span>3 productos</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTES ============ -->
+    <section class="section clients" id="clientes">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">A quién servimos</span>
+          <h2>Soluciones para cada tipo de cliente</h2>
+        </div>
+        <div class="clients__grid">
+          <div class="client reveal"><span class="client__num">01</span><h3>Industria</h3><p>Abastecimiento continuo para plantas, zonas francas y empresas del sector industrial.</p></div>
+          <div class="client reveal"><span class="client__num">02</span><h3>Contratistas</h3><p>Materiales y herramientas para constructoras, ingenieros y maestros de obra.</p></div>
+          <div class="client reveal"><span class="client__num">03</span><h3>Comercios</h3><p>Precios competitivos para ferreterías y negocios que revenden nuestros productos.</p></div>
+          <div class="client reveal"><span class="client__num">04</span><h3>Hogar</h3><p>Todo lo que necesitas para reparar, mantener y mejorar tu casa.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Síguenos</span>
+          <h2>@selactcorp en Instagram</h2>
+          <p>Novedades, productos y proyectos de nuestros clientes.</p>
+        </div>
+        <div class="gallery__grid reveal" id="galleryGrid"><!-- generado por main.js --></div>
+        <div class="gallery__cta">
+          <a href="https://www.instagram.com/selactcorp/" target="_blank" rel="noopener" class="btn btn--navy">Ver más en Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COTIZAR ============ -->
+    <section class="section quote" id="cotizar">
+      <div class="container quote__inner">
+        <div class="quote__info reveal">
+          <span class="eyebrow">Cotización</span>
+          <h2>¿Necesitas materiales para tu proyecto?</h2>
+          <p>Cuéntanos qué necesitas y te enviaremos una cotización a la mayor brevedad. También puedes armar tu lista desde el <a href="catalogo.html" style="color:#fff;text-decoration:underline">catálogo</a> o escribirnos directamente por WhatsApp.</p>
+          <a href="#" class="btn btn--whatsapp js-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+
+        <form class="form reveal" id="quoteForm" novalidate>
+          <div class="form__row">
+            <label>Nombre completo<input type="text" name="nombre" required placeholder="Tu nombre"></label>
+            <label>Empresa (opcional)<input type="text" name="empresa" placeholder="Nombre de tu empresa"></label>
+          </div>
+          <div class="form__row">
+            <label>Teléfono<input type="tel" name="telefono" required placeholder="809-000-0000"></label>
+            <label>Categoría
+              <select name="categoria">
+                <option>Ferretería</option><option>Construcción</option><option>Eléctricos</option><option>Hogar</option>
+                <option>Productos Tolsen</option><option>Productos SAM / SAM Plus</option><option>Otro</option>
+              </select>
+            </label>
+          </div>
+          <label>¿Qué necesitas?<textarea name="mensaje" rows="4" required placeholder="Describe los productos y cantidades que necesitas..."></textarea></label>
+          <button type="submit" class="btn btn--red btn--block">Enviar solicitud por WhatsApp</button>
+          <p class="form__note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2>Visítanos o escríbenos</h2>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span>
+              <div><strong>Dirección</strong><a href="https://maps.app.goo.gl/XKJsfz53vK6AMtji9" target="_blank" rel="noopener">Bajos de Haina, San Cristóbal, República Dominicana</a></div>
+            </li>
+            <li>
+              <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+              <div><strong>Teléfono / WhatsApp</strong><a href="#" class="js-phone"></a></div>
+            </li>
+            <li class="js-email-row">
+              <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span>
+              <div><strong>Correo</strong><a href="#" class="js-email"></a></div>
+            </li>
+            <li class="js-hours-row">
+              <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.5 5v5.3l4.5 2.7-.8 1.2-5.2-3.2V7z"/></svg></span>
+              <div><strong>Horario</strong><span class="js-hours"></span></div>
+            </li>
+          </ul>
+          <div class="socials">
+            <a href="https://www.instagram.com/selactcorp/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM21.9 7c-.1-1.6-.4-3-1.6-4.2S17.6 1.2 16 1.1C14.4 1 9.6 1 8 1.1 6.4 1.2 5 1.5 3.8 2.7S2.2 5.4 2.1 7C2 8.6 2 15.4 2.1 17c.1 1.6.4 3 1.6 4.2s2.7 1.5 4.3 1.6c1.6.1 8.4.1 10 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-8.4 0-10zm-2.1 12a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4A3.3 3.3 0 0 1 4.8 19c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7A3.3 3.3 0 0 1 6.6 5.8c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7z"/></svg></a>
+            <a href="https://www.facebook.com/Selact-Corp-2378262102408310/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-.9.6-1 1-1h2.5V1H14c-3.9 0-4.8 2.9-4.8 4.8V8H6.5v4h2.7v11H14V12h3.3l.4-4z"/></svg></a>
+            <a href="https://www.linkedin.com/in/selact-corp-2ab63a184/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6.1V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a>
+            <a href="https://twitter.com/SelactCorp" target="_blank" rel="noopener" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M17.8 2h3.4l-7.4 8.5L22.5 22h-6.8l-5.3-7-6.1 7H.9l7.9-9L.5 2h7l4.8 6.4zm-1.2 18h1.9L6.5 3.9H4.5z"/></svg></a>
+          </div>
+        </div>
+        <div class="contact__map reveal">
+          <iframe title="Ubicación de Selact Corporation en Bajos de Haina"
+            src="https://www.google.com/maps?q=Bajos+de+Haina,+San+Crist%C3%B3bal,+Rep%C3%BAblica+Dominicana&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#inicio" class="logo logo--light"><img src="assets/img/logo-selact.png" alt="Selact Corporation" width="801" height="142"></a>
+        <p>Los mejores productos ferreteros e insumos de construcción, para uso industrial y doméstico.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="#nosotros">Nosotros</a><a href="#productos">Productos</a><a href="catalogo.html">Catálogo</a><a href="#contacto">Contacto</a>
+      </div>
+      <div>
+        <h4>Marcas</h4>
+        <a href="catalogo.html?marca=TOLSEN">Tolsen</a><a href="catalogo.html?marca=SAM">SAM</a><a href="catalogo.html?buscar=SAM%20PLUS">SAM Plus</a><a href="catalogo.html?marca=FAMA">Fama</a><a href="catalogo.html?marca=URREA">Urrea</a><a href="index.html#marcas">Todas las marcas</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Bajos de Haina, San Cristóbal,<br>República Dominicana</p>
+        <a href="#" class="js-whatsapp" target="_blank" rel="noopener"><span class="js-phone-text">(829) 732-1674</span></a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Selact Corporation. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="wa-float js-whatsapp" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
