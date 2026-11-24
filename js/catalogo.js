@@ -17,7 +17,6 @@
 
   const esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-  const fmtMoney = (n) => "RD$ " + Number(n).toLocaleString("es-DO", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   /* ---------- Estado (sincronizado con la URL) ---------- */
   const params = new URLSearchParams(location.search);
@@ -27,7 +26,6 @@
     grupo: params.get("grupo") || "",
     page: Math.max(parseInt(params.get("page")) || 1, 1),
   };
-  let mostrarPrecios = false;
   let lastItems = [];
 
   const syncUrl = () => {
@@ -67,7 +65,7 @@
 
   const api = {
     async filtros() {
-      if (DEMO) return { success: true, mostrarPrecios: false, marcas: countBy("marca"), grupos: countBy("grupo") };
+      if (DEMO) return { success: true, marcas: countBy("marca"), grupos: countBy("grupo") };
       const r = await fetch(window.Selact.apiUrl("/api/public/catalogo/filtros?v=2"));
       return r.json();
     },
@@ -123,7 +121,6 @@
       $("filters").querySelectorAll(".chips").forEach(chipsNoDisponible);
       return;
     }
-    mostrarPrecios = !!json.mostrarPrecios;
     const marcas = Array.isArray(json.marcas) ? json.marcas : [];
     const grupos = Array.isArray(json.grupos) ? json.grupos : Array.isArray(json.categorias) ? json.categorias : [];
 
@@ -175,7 +172,6 @@
           ${p.marca ? `<span class="product__brand">${esc(p.marca)}</span>` : p.grupo ? `<span class="product__brand product__brand--muted">${esc(p.grupo)}</span>` : ""}
           <h3 class="product__name">${esc(p.descripcion)}</h3>
           <span class="product__meta">Cód. ${esc(p.codigo)}${p.referencia ? ` · Ref. ${esc(p.referencia)}` : ""}</span>
-          ${mostrarPrecios && p.precio != null ? `<span class="product__price">${fmtMoney(p.precio)}</span>` : ""}
           <div class="product__actions">
             <button type="button" class="btn btn--navy btn--sm btn--block js-add">${inCart ? "✓ En la lista" : "Agregar a cotización"}</button>
           </div>
