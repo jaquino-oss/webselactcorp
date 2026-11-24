@@ -17,7 +17,8 @@ window.SELACT_CONFIG = {
   // URL pública del servicio NAV BI (Express) SIN barra final.
   // Ej: "https://api.selactcorp.com"  o  "http://192.168.1.10:3002" (solo pruebas en la red local)
   // Vacío = el catálogo funciona en MODO DEMOSTRACIÓN con productos de ejemplo.
-  apiUrl: "http://selactcorp.fortiddns.com:3002",
+  //apiUrl: "http://selactcorp.fortiddns.com:3002",
+  apiUrl: "https://api.selactcorp.com",
 
   // Productos por página en el catálogo
   productosPorPagina: 24,
