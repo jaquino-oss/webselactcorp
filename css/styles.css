@@ -230,6 +230,26 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 .about__media::before {
   content: ""; position: absolute; inset: 24px -24px -24px 24px; border: 3px solid var(--red); border-radius: 22px; z-index: -1;
 }
+/* Carrusel de fotos de Nosotros (fundido + acercamiento suave, como el inicio) */
+.photo--slides > img {
+  position: absolute; inset: 0; opacity: 0; transform: scale(1.08);
+  transition: opacity 1.2s ease, transform 7s ease-out;
+}
+.photo--slides > img.is-active { opacity: 1; transform: scale(1); }
+.photo--slides::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 30%; pointer-events: none;
+  background: linear-gradient(to top, rgba(11,22,52,.55), transparent);
+}
+.about__dots { position: absolute; right: 20px; bottom: 20px; z-index: 2; display: flex; gap: 7px; }
+.about__dots button {
+  width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; cursor: pointer;
+  background: rgba(255,255,255,.55); transition: width .35s, background .35s;
+}
+.about__dots button:hover { background: #fff; }
+.about__dots button.is-active { width: 26px; background: var(--red-bright); }
+@media (prefers-reduced-motion: reduce) {
+  .photo--slides > img { transition: opacity .3s; transform: none !important; }
+}
 .about__tag {
   position: absolute; left: -20px; bottom: 36px; background: var(--white); border-radius: 12px;
   padding: .9rem 1.2rem; display: flex; gap: .8rem; align-items: center; box-shadow: var(--shadow);

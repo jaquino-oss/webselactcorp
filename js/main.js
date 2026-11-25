@@ -95,11 +95,52 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- Fotos: si el archivo no existe se muestra un respaldo ---------- */
-  document.querySelectorAll(".photo > img").forEach((img) => {
+  document.querySelectorAll(".photo:not(.photo--slides) > img").forEach((img) => {
     const markMissing = () => img.parentElement.classList.add("is-missing");
     if (img.complete && img.naturalWidth === 0) markMissing();
     img.addEventListener("error", markMissing);
   });
+
+  /* ---------- Carrusel de fotos de Nosotros ---------- */
+  const aboutSlides = document.getElementById("aboutSlides");
+  if (aboutSlides) {
+    const dotsBox = aboutSlides.querySelector(".about__dots");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let imgs = [];
+    let current = 0;
+    let hover = false;
+
+    const show = (i) => {
+      if (!imgs.length) return;
+      current = (i + imgs.length) % imgs.length;
+      imgs.forEach((im, k) => im.classList.toggle("is-active", k === current));
+      dotsBox.querySelectorAll("button").forEach((b, k) => b.classList.toggle("is-active", k === current));
+    };
+    const build = () => {
+      imgs = [...aboutSlides.querySelectorAll(":scope > img")];
+      if (!imgs.length) return aboutSlides.classList.add("is-missing");
+      dotsBox.innerHTML = imgs.length > 1
+        ? imgs.map((_, k) => `<button type="button" aria-label="Foto ${k + 1}"></button>`).join("")
+        : "";
+      dotsBox.querySelectorAll("button").forEach((b, k) => b.addEventListener("click", () => show(k)));
+      show(Math.min(current, imgs.length - 1));
+    };
+    // Una foto que no existe se quita del carrusel
+    aboutSlides.querySelectorAll(":scope > img").forEach((img) => {
+      const drop = () => { img.remove(); build(); };
+      if (img.complete && img.naturalWidth === 0) img.remove();
+      else img.addEventListener("error", drop);
+    });
+    build();
+
+    aboutSlides.addEventListener("mouseenter", () => (hover = true));
+    aboutSlides.addEventListener("mouseleave", () => (hover = false));
+    if (!reduce) {
+      setInterval(() => {
+        if (!hover && !document.hidden && imgs.length > 1) show(current + 1);
+      }, 5000);
+    }
+  }
 
   /* ---------- Animaciones al aparecer ---------- */
   const revealObs = new IntersectionObserver(
